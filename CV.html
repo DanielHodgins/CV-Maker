@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Hodgins CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 2.5cm;
+        }
+        .header, .footer {
+            text-align: center;
+        }
+        .footer {
+            position: fixed;
+            bottom: 15pt;
+            left: 0;
+            width: 100%;
+        }
+        .content {
+            margin-bottom: 100px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #1c4aee;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Daniel Hodgins</h1>
+        <h2>PhD Student</h2>
+        <div class="social-icons">
+            <a href="https://danielhodgins.github.io/"><i class="fas fa-home"></i></a>
+            <a href="https://github.com/DanielHodgins"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/daniel-hodgins-811b90270/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <div id="education"></div>
+        </section>
+
+        <!-- Job Experience Section -->
+        <section>
+            <h2>Job Experience</h2>
+            <div id="job-experience"></div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div id="technical-skills"></div>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>Projects</h2>
+            <div id="projects"></div>
+        </section>
+
+        <!-- Awards and Honors Section -->
+        <section>
+            <h2>Awards and Honors</h2>
+            <div id="awards-honors"></div>
+        </section>
+
+        <!-- Volunteer Services Section -->
+        <section>
+            <h2>Volunteer Services</h2>
+            <div id="volunteer-services"></div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
+        <p>Daniel Hodgins · CV</p>
+        <p>Page <span class="page-num"></span> / <span class="page-count"></span></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const totalPages = Math.ceil(document.body.scrollHeight / window.innerHeight);
+            document.querySelector('.page-count').textContent = totalPages;
+            window.addEventListener('scroll', function() {
+                const currentPage = Math.ceil(window.scrollY / window.innerHeight) + 1;
+                document.querySelector('.page-num').textContent = currentPage;
+            });
+
+            // Load content from external HTML files
+            function loadHTMLContent(id, filename) {
+                fetch(filename)
+                    .then(response => response.text())
+                    .then(data => document.getElementById(id).innerHTML = data)
+                    .catch(error => console.error('Error loading content:', error));
+            }
+
+            loadHTMLContent('education', 'resume/Education.html');
+            loadHTMLContent('job-experience', 'resume/JobExperience.html');
+            loadHTMLContent('technical-skills', 'resume/TechnicalSkills.html');
+            loadHTMLContent('projects', 'resume/Projects.html');
+            loadHTMLContent('awards-honors', 'resume/AwardsAndHonors.html');
+            loadHTMLContent('volunteer-services', 'resume/VolunteerServices.html');
+        });
+    </script>
+</body>
+</html>

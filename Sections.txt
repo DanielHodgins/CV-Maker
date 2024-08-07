@@ -1,15 +1,2 @@
 Heading:
-Education:
-Job Experience:
-Publications:
-Presentations:
-Honors and Awards:
-References:
-Skills:
-Grants and Funding:
-Institutional Service:
-Certifications:
-Professional Associations:
-Research Interests:
-Current and Recent Research:
-Community Involvement:
+

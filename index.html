@@ -15,10 +15,7 @@
             margin: 2.5cm;
         }
         .footer {
-            position: fixed;
-            bottom: 15pt;
-            left: 0;
-            width: 100%;
+            text-align: center;
         }
         .content {
             margin-bottom: 100px;
@@ -79,7 +76,15 @@
             <div id="volunteer-services"></div>
         </section>
     </div>
-
+<footer>
+        <table class="footer-table">
+            <tr>
+                <td>Last updated: <script>document.write(new Date().toLocaleDateString());</script></td>
+                <td>Daniel Hodgins · CV</td>
+                <td>Page <span class="page-num"></span> / <span class="page-count"></span></td>
+            </tr>
+        </table>
+</footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -107,9 +112,4 @@
         });
     </script>
 </body>
-<footer>
-        <p>Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
-        <p>Daniel Hodgins · CV</p>
-        <p>Page <span class="page-num"></span> / <span class="page-count"></span></p>
-</footer>
 </html>

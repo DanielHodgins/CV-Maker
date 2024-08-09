@@ -74,21 +74,14 @@
 <footer>
         <table>
             <tr>
-                <td width="33%">Last updated: <script>document.write(new Date().toLocaleDateString());</script></td>
+                <td width="33%"></td>
                 <td width="33%">Daniel Hodgins · CV</td>
-                <td width="33%">Page <span class="page-num"></span> / <span class="page-count"></span></td>
+                <td width="33%"> </td>
             </tr>
         </table>
 </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const totalPages = Math.ceil(document.body.scrollHeight / window.innerHeight);
-            document.querySelector('.page-count').textContent = totalPages;
-            window.addEventListener('scroll', function() {
-                const currentPage = Math.ceil(window.scrollY / window.innerHeight) + 1;
-                document.querySelector('.page-num').textContent = currentPage;
-            });
 
             // Load content from external HTML files
             function loadHTMLContent(id, filename) {

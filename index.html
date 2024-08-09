@@ -31,6 +31,9 @@
     </style>
 </head>
 <header style="text-align: center;">
+    <button id="download-pdf" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Download PDF
+    </button>
     <div id="heading"></div>
 </header>
 <body>
@@ -108,5 +111,15 @@
             loadHTMLContent('heading', 'resume/heading.html');
         });
     </script>
+    <script>
+      document.getElementById('download-pdf').addEventListener('click', function () {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        doc.fromHTML(document.body, 10, 10);
+        doc.save('page.pdf');
+      });
+    </script>
+
 </body>
 </html>

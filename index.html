@@ -10,10 +10,6 @@
             font-family: "Times New Roman", Times, serif;
             margin: 2.5cm;
         }
-        header {
-            text-align: center;
-            margin: 2.5cm;
-        }
         .footer {
             text-align: center;
             position: fixed;
@@ -31,16 +27,8 @@
         }
     </style>
 </head>
-<header>
-    <div class="header">
-        <h1>Daniel Hodgins</h1>
-        <h2>PhD Student</h2>
-        <div class="social-icons">
-            <a href="https://danielhodgins.github.io/"><i class="fas fa-home"></i></a>
-            <a href="https://github.com/DanielHodgins"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/daniel-hodgins-811b90270/"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </div>
+<header text-align="center">
+    <div id="heading"></div>
 </header>
 <body>
     <div class="content">
@@ -113,6 +101,8 @@
             loadHTMLContent('projects', 'resume/Projects.html');
             loadHTMLContent('awards-honors', 'resume/Awards And Honors.html');
             loadHTMLContent('volunteer-services', 'resume/VolunteerService.html');
+            
+            loadHTMLContent('heading', 'resume/heading.html');
         });
     </script>
 </body>

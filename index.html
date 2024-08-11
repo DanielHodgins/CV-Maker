@@ -13,6 +13,7 @@
         body {
             font-family: "Times New Roman", Times, serif;
             margin: 1cm;
+            background-color: #505050;
         }
         .footer {
             text-align: center;
@@ -30,12 +31,20 @@
             color: #1040ee;
             text-decoration: none;
         }
+                .container {
+            background-color: #ffffff; /* White background for the middle content */
+            width: 80%; /* Adjust width as needed */
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow to create depth */
+        }
     </style>
 </head>
+<body >
+<div class="container">
 <header style="text-align: center; ">
     <div id="heading"></div>
 </header>
-<body >
+
     <div class="content" style="">
         <!-- Education Section -->
         <section>
@@ -82,7 +91,7 @@
             </tr>
         </table>
 </footer>
-
+</div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Load content from external HTML files
